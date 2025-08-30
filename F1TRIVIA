@@ -21,7 +21,7 @@ else:
 
 #  final, operaciónes con operadores...(?)
 print("Sacaste:")
-calificacion = (score / total_preguntas) * 100
+calificacion = (score / preguntas) * 100
 print(calificacion, "/100")
 
 if calificacion == 100:
