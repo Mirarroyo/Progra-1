@@ -1,0 +1,35 @@
+# variables
+score = 0
+preguntas = 10
+
+# ejemplo de pregunta
+print("Quién ganó el GP de México 2024?")
+print("A) Checo Pérez")
+print("B) Max Verstappen")
+print("C) Carlos Sainz")
+print("D) Lewis Hamilton")
+
+respuesta = input("Tu respuesta: ")
+
+# operaciónes con operadores...(?)
+if respuesta == "C" or "c":
+    score = score + 1   
+else:
+    score = score + 0 
+
+#repetir con todas las preguntas
+
+#  final, operaciónes con operadores...(?)
+print("Sacaste:")
+calificacion = (score / total_preguntas) * 100
+print(calificacion, "/100")
+
+if calificacion == 100:
+    print("Eres un experto en la Fórmula 1!")
+elif calificacion >= 50:
+    print("Puedes mejorar!")
+else:
+    print("Intenta de nuevo!")
+
+# reiniciar o despedir, no tengo claro como "reiniciar el codigo"
+print("Gracias por participar!")
