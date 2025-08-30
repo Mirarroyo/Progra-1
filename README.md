@@ -9,7 +9,7 @@ El programa tendrá preguntas de opción múltiple, validará las respuestas del
 
 ¿Por qué es interesante?
 
-Porque combina i gusto por la Formula 1 con la programación es relativamente sencillo y podré aplicar lo que iremos viendo en clase. 
+Porque combina mi gusto por la Formula 1 con la programación, es relativamente sencillo y podré aplicar lo que iremos viendo en clase. 
 
 ALGORITMO 
 
@@ -17,7 +17,7 @@ ALGORITMO
    
 Definir lista de preguntas (listas con opciones y respuesta correcta)
 
-definir frases para resultados de  mal, bien, excelnte. 
+definir frases para resultados de mal, bien, excelnte. 
 
 variable SCORE=0
 
@@ -27,7 +27,7 @@ mostrar pregunta y opciones de respuesta
 
 leer respuesta con input()
 
-if = resouesta correcta -> SCORE = SCORE + 1
+if = respuesta correcta -> SCORE = SCORE + 1
 
 (esto para cada pregunta)
 
