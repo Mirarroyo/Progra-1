@@ -1,35 +1,52 @@
 # variables
-score = 0
-preguntas = 10
+def las_preguntas(pregunta, opciones, respuesta_correcta):
+    print(pregunta) 
+    for opcion in opciones:
+        print(opcion)
+    respuesta = input("Tu respuesta: ")
 
-# ejemplo de pregunta
-print("Quién ganó el GP de México 2024?")
-print("A) Checo Pérez")
-print("B) Max Verstappen")
-print("C) Carlos Sainz")
-print("D) Lewis Hamilton")
+    if respuesta == respuesta_correcta:
+        return 1   # operador aritmético (+)
+    else:
+        return 0
 
-respuesta = input("Tu respuesta: ")
+def jugar():
+    score = 0
+    total_preguntas = 2
 
-# operaciónes con operadores...(?)
-if respuesta == "C" or "c":
-    score = score + 1   
-else:
-    score = score + 0 
+    print("Bienvenido a la F1 TRIVIA")
 
-#repetir con todas las preguntas
+    # pregunta 1
+    pregunta = "¿Quién ganó el GP de México 2024?"
+    opciones = ["A) Checo Pérez", "B) Max Verstappen", "C) Carlos Sainz", "D) Lewis Hamilton"]
+    respuesta_correcta = "B"
+    score += las_preguntas(pregunta, opciones, respuesta_correcta)
 
-#  final, operaciónes con operadores...(?)
-print("Sacaste:")
-calificacion = (score / preguntas) * 100
-print(calificacion, "/100")
+    # pregunta 2
+    pregunta = "¿En qué ciudad se corre el GP de México?"
+    opciones = ["A) Monterrey", "B) Guadalajara", "C) Ciudad de México", "D) Querétaro"]
+    respuesta_correcta = "C"
+    score += las_preguntas(pregunta, opciones, respuesta_correcta)
 
-if calificacion == 100:
-    print("Eres un experto en la Fórmula 1!")
-elif calificacion >= 50:
-    print("Puedes mejorar!")
-else:
-    print("Intenta de nuevo!")
+    # operador aritmético (/ y *)
+    calificacion = (score / total_preguntas) * 100
+    print("Sacaste:", calificacion, "/100")
 
-# reiniciar o despedir, no tengo claro como "reiniciar el codigo"
-print("Gracias por participar!")
+    # operadores relacionales (==, >=)
+    if calificacion == 100:
+        print("Eres un experto en F1!")
+    elif calificacion >= 50:
+        print("Sigue la pista, vas en buen camino!")
+    else:
+        print("Necesitas más practicas, pero no te preocupes,cada fin de carrera hay 3!")
+
+jugar_again = "si"
+while jugar_again == "si":
+    jugar()
+    jugar_again = input("Quieres jugar de nuevo? (si/no): ")
+
+print("Gracias por participar ")
+
+
+
+
