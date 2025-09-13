@@ -5,6 +5,7 @@ def las_preguntas(pregunta, opciones, respuesta_correcta):
         print(opcion)
     respuesta = input("Tu respuesta: ")
 
+# estructura de decisión (if-else)
     if respuesta == respuesta_correcta:
         return 1   # operador aritmético (+)
     else:
@@ -33,6 +34,7 @@ def jugar():
     print("Sacaste:", calificacion, "/100")
 
     # operadores relacionales (==, >=)
+    # estructura de decisión (if - elif - else)
     if calificacion == 100:
         print("Eres un experto en F1!")
     elif calificacion >= 50:
@@ -40,6 +42,7 @@ def jugar():
     else:
         print("Necesitas más practicas, pero no te preocupes,cada fin de carrera hay 3!")
 
+ # estructura de decisión adicional
 jugar_again = "si"
 while jugar_again == "si":
     jugar()
