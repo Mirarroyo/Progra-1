@@ -1,4 +1,4 @@
-# variables
+# funciones de las variables
 def las_preguntas(pregunta, opciones, respuesta_correcta):
     print(pregunta)
     
@@ -18,7 +18,7 @@ def jugar():
 
     print("Bienvenido a la F1 TRIVIA")
 
-    # Lista de preguntas 
+    # Lista (arreglo) de preguntas 
     preguntas = [
         
      # pregunta 1
@@ -41,11 +41,12 @@ def jugar():
          ["A) Ayrton Senna", "B) Fernando Alonso", "C) Sebastian Vettel", "D) Lewis Hamilton"],
          "A")
         ]
-    #ciclo para recorrer las preguntas
+
+    #ciclo para recorrer a lista de las preguntas
     for pregunta, opciones, respuesta_correcta in preguntas:
         score += las_preguntas(pregunta, opciones, respuesta_correcta)
     
-     # operador aritmético (/ y *)
+     # operador aritmético (/ y *) con listas
     total_preguntas = len(preguntas)
     calificacion = (score / total_preguntas) * 100
     print("Sacaste: ", calificacion, "/100")
@@ -59,7 +60,7 @@ def jugar():
     else:
         print("Necesitas más practicas, pero no te preocupes, cada gp hay 3!")
 
- # estructura de decisión adicional
+ # estructura de decisión/repaticion de listas
 jugar_again = "si"
 while jugar_again == "si":
     jugar()
