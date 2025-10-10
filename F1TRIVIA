@@ -5,19 +5,26 @@ def las_preguntas(pregunta, opciones, respuesta_correcta):
     #ciclo para mostrar opcines 
     for opcion in opciones:
         print(opcion)
-    respuesta = input("Tu respuesta: ")
+    respuesta = input(" \n Tu respuesta: ")
+    
 
-# estructura de decisión (if-else)
-    if respuesta == respuesta_correcta:
+# estructura de ciclos while 
+    while respuesta.upper() not in ["A","B","C","D"]:
+        print("Respuesta no valida, intenta de nuevo")
+        respuesta = input("Tu respuesta: ")
+        
+# estructura de decisión (if-else)        
+    if respuesta.upper == respuesta_correcta:
         return 1   # operador aritmético (+)
     else:
         return 0
+   
 
 # funcion principal 
 def jugar():
     score = 0
 
-    print("Bienvenido a la F1 TRIVIA")
+    print("Bienvenido a la F1 TRIVIA \n")
 
     # lista anidada para las preguntas 
     # lista simple para las opciones 
