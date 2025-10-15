@@ -1,3 +1,5 @@
+import random  
+ 
 # funciones de las variables
 def las_preguntas(pregunta, opciones, respuesta_correcta):
     print(pregunta)
@@ -9,12 +11,12 @@ def las_preguntas(pregunta, opciones, respuesta_correcta):
     
 
 # estructura de ciclos while 
-    while respuesta.upper() not in ["A","B","C","D"]:
+    while respuesta.lower() not in ["a","b","c","d"]:
         print("Respuesta no valida, intenta de nuevo")
         respuesta = input("Tu respuesta: ")
         
 # estructura de decisión (if-else)        
-    if respuesta.upper == respuesta_correcta:
+    if respuesta.lower() == respuesta_correcta:
         return 1   # operador aritmético (+)
     else:
         return 0
@@ -30,26 +32,49 @@ def jugar():
     # lista simple para las opciones 
     preguntas = [
         
-     # pregunta 1
-        ["¿Quién ganó el GP de México 2024?" ,
-         ["A) Checo Pérez", "B) Max Verstappen", "C) Carlos Sainz", "D) Lewis Hamilton"],
-         "B"],
-
-    # pregunta 2
-        ["¿En qué ciudad se corre el GP de México?",
-         ["A) Monterrey", "B) Guadalajara", "C) Ciudad de México", "D) Querétaro"],
-         "C"],
-        
-    # pregunta 3
-        ["¿Que equipo ganó el campeonato de constructores 2023?",
-         ["A) Maclaren", "B) Haas", "C) Ferrari", "D) Redbull"],
-         "D"],
-        
-    # pregunta 4
-        ["¿Qué piloto es conocido como 'El Rey de Mónaco'?",
-         ["A) Ayrton Senna", "B) Fernando Alonso", "C) Sebastian Vettel", "D) Lewis Hamilton"],
-         "A"]
+         
+     #1
+    ["\n¿Quién tiene más campeonatos mundiales de Fórmula 1?",
+     ["a) Lewis Hamilton", "b) Michael Schumacher", "c) Max Verstappen", "d) Ayrton Senna"], "b"],
+    
+     #2
+    ["\n¿En qué año se celebró el primer campeonato oficial de Fórmula 1?",
+     ["a) 1946", "b) 1950", "c) 1955", "d) 1960"], "b"],
+    
+     #3
+    ["\n¿Qué escudería es conocida como 'La Scuderia'?",
+     ["a) Mercedes", "b) Ferrari", "c) Red Bull", "d) McLaren"], "b"],
+    
+     #4
+    ["\n¿Qué piloto español ganó el Mundial en 2005 y 2006?",
+     ["a) Fernando Alonso", "b) Carlos Sainz", "c) Pedro de la Rosa", "d) Marc Gené"], "a"],
+    
+     #5
+    ["\n¿En qué circuito se corre el Gran Premio de Mónaco?",
+     ["a) Silverstone", "b) Monza", "c) Monte Carlo", "d) Spa-Francorchamps"],"c"],
+    
+     #6
+    ["\n¿Cuál es el color principal del equipo Red Bull Racing?",
+     ["a) Azul", "b) Rojo", "c) Negro", "d) Amarillo"], "a"],
+    
+     #7
+    ["\n¿Qué país alberga el circuito de Suzuka?",
+     ["a) China", "b) Japón", "c) Corea del Sur", "d) Tailandia"], "b"],
+    
+     #8
+    ["\n¿Cuál es el apodo del piloto Charles Leclerc?",
+     ["a) The Prince of Monaco", "b) The Ice Man", "c) Mad Max", "d) The Honey Badger"], "a"],
+    
+     #9
+    ["\n¿Qué neumáticos fabrica la Fórmula 1 actualmente?",
+     ["a) Bridgestone", "b) Michelin", "c) Goodyear", "d) Pirelli"], "d"],
+   
+     #10
+    ["\n¿Cuál de estos circuitos es el más rápido del calendario?",
+     ["a) Spa-Francorchamps", "b) Monza", "c) Silverstone", "d) Baku"],"b"]
         ]
+    
+    random.shuffle(preguntas)
 
     #ciclo para recorrer a lista de las preguntas
     for pregunta, opciones, respuesta_correcta in preguntas:
@@ -58,7 +83,7 @@ def jugar():
      # operador aritmético (/ y *) con listas
     total_preguntas = len(preguntas)
     calificacion = (score / total_preguntas) * 100
-    print("Sacaste: ", calificacion, "/100")
+    print("\nSacaste: ", calificacion, "/100")
 
     # operadores relacionales (==, >=)
     # estructura de decisión (if - elif - else)
@@ -73,6 +98,7 @@ def jugar():
 jugar_again = "si"
 while jugar_again == "si":
     jugar()
-    jugar_again = input("Quieres jugar de nuevo? (si/no): ")
+    jugar_again = input("\nQuieres jugar de nuevo? (si/no): ")
 
 print("Gracias por participar ")
+
