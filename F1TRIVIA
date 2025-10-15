@@ -1,34 +1,51 @@
+# Importa el módulo para mezclar las preguntas 
 import random  
  
-# funciones de las variables
+"""
+================== funcion para las preguntas  ====================
+"""
 def las_preguntas(pregunta, opciones, respuesta_correcta):
     print(pregunta)
     
-    #ciclo para mostrar opcines 
+    """
+Muestra una pregunta y sus opciones, al igual que pide una respuesta al usuario,
+e internamente devuekve un 1 si la respuesta es correcta o 0 si no
+    """
+    
+    # Ciclo para mostrar opcines 
     for opcion in opciones:
         print(opcion)
+    # Pide respuesta al usuario
     respuesta = input(" \n Tu respuesta: ")
     
 
-# estructura de ciclos while 
+    # Estructura de ciclos while: si el usuario pone algo no válido, se repite
     while respuesta.lower() not in ["a","b","c","d"]:
         print("Respuesta no valida, intenta de nuevo")
         respuesta = input("Tu respuesta: ")
         
-# estructura de decisión (if-else)        
+    # Estructura de decisión (if-else), compara las respuesta       
     if respuesta.lower() == respuesta_correcta:
-        return 1   # operador aritmético (+)
+        return 1   # operador aritmético (+): suma puntos 
     else:
         return 0
    
+"""
+================== funcion principal de la trivia ====================
+"""
 
-# funcion principal 
 def jugar():
-    score = 0
+    """
+- Muestra las preguntas en orden aleatoreo
+- Calcula la calificaón final
+- Muestra un mensaje según el resultado
+"""
+    # Acumulador de puntos 
+    score = 0 
 
     print("Bienvenido a la F1 TRIVIA \n")
 
-    # lista anidada para las preguntas 
+    # Lista anidada para las preguntas 
     # lista simple para las opciones 
     preguntas = [
         
@@ -74,13 +91,14 @@ def jugar():
      ["a) Spa-Francorchamps", "b) Monza", "c) Silverstone", "d) Baku"],"b"]
         ]
     
+    #Mexcla aleatoriamente el orden de la lista de preguntas 
     random.shuffle(preguntas)
 
-    #ciclo para recorrer a lista de las preguntas
+    # Ciclo para recorrer a lista de las preguntas y su sub-lista
     for pregunta, opciones, respuesta_correcta in preguntas:
         score += las_preguntas(pregunta, opciones, respuesta_correcta)
     
-     # operador aritmético (/ y *) con listas
+     # Operador aritmético (/ y *) con listas, calcula la calificación final 
     total_preguntas = len(preguntas)
     calificacion = (score / total_preguntas) * 100
     print("\nSacaste: ", calificacion, "/100")
@@ -94,6 +112,9 @@ def jugar():
     else:
         print("Necesitas más practicas, pero no te preocupes, cada gp hay 3!")
 
+"""
+================== Ciclo principal para repetir la trivia  ====================
+"""
  # estructura de decisión/repaticion de listas
 jugar_again = "si"
 while jugar_again == "si":
@@ -101,4 +122,3 @@ while jugar_again == "si":
     jugar_again = input("\nQuieres jugar de nuevo? (si/no): ")
 
 print("Gracias por participar ")
-
