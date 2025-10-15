@@ -40,7 +40,3 @@ if = para imprimir una frase sobre su resultado
 si si, reiniciar SCORE y repetir
 
 si no, print("Gracias por jugar") 
-
-
-
- 
