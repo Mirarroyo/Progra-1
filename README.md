@@ -1,42 +1,74 @@
-# Progra-1
-Trivia de Formula 1
+# Trivia de Fórmula 1
+# Contexto
+La Fórmula 1 es de los deportes más populares a nivel mundial. 
+Muchos aficionados disfrutan no solo de verlas carreras sino también poner a prueba 
+sus conocimientos sobre el deporte. (pilotos, escuderías, historia).
 
-contexto:
+Este proyecto será un juego de preguntas tipo trivial sobre Fórmula 1 que permite que 
+el jugador/usuario responda dichas preguntas. El programa de Python, tendrá preguntas de opción múltiple, 
+validará las respuestas del jugador/usuario, calculará su puntaje final y le dirá si es 
+un verdadero aficionado dependiendo del puntaje final.
 
-La formula 1 es de los deportes más populares a nivel mundial. Muchos aficionados disfrutan no solo de verlas carreras sino también poner aprueba sus conocimientos sobre el deporte. (pilotos, escuredias, historia). 
-Este proyecto sera un juego de trivia con preguntas sobre Formula 1.
-El programa tendrá preguntas de opción múltiple, validará las respuestas del jugador, calculará su puntaje final y le dirá si es un verdadero aficionado. 
 
-¿Por qué es interesante?
+# ¿Por qué es interesante?
+Este proyecto combina mi gusto por la Fórmula 1 con la programación.
+Me permite aplicar de manera práctica los conocimientos vistos en clase, 
+tales como: estructuras condicionales, ciclos, funciones, listas, listas anidadas,
+operadores aritméticos y manejo del módulo random. 
+Y el 26 de Octubre, justo se llevará a cabo el Gran Premio de la Ciudad de México.
 
-Porque combina mi gusto por la Formula 1 con la programación, es relativamente sencillo y podré aplicar lo que iremos viendo en clase. 
+# Algoritmo
+      Inicio:
+      
+      Mostrar mensaje de bienvenida (print())
+      
+      Definir datos:
+      
+      Crear una lista anidada con las preguntas, opciones y la respuesta correcta
+      
+      Inicializar la variable score = 0
+      
+      Ciclo principal (for):
+      
+      Mostrar cada pregunta y sus opciones
+      
+      Pedir respuesta al usuario (input())
+      
+      Validar si la respuesta es correcta o no con if y else
+      
+      Sumar 1 punto al score si acierta
+      
+      Calcular calificación:
+      
+      Usar operadores aritméticos (/ y *) para obtener el porcentaje total
+      
+      Mostrar resultado:
+      
+      Usar estructuras condicionales (if, elif, else) para mostrar un mensaje personalizado según el puntaje
+      
+      Repetición del juego:
+      
+      Con un ciclo while, preguntar si el usuario desea volver a jugar
+      
+      Si responde “sí”, el juego se reinicia con las preguntas en orden aleatorio usando random.shuffle()
+      
+      Fin del programa:
+      
+      Mostrar un mensaje de despedida
+      
+# Biblioteca random y referencias al API de Python
+random.shuffle()
 
-ALGORITMO 
+Utilizada para cambiar el orden de las preguntas en cada partida.
 
-1. Eo= Mensaje de bienvenida (print)
-   
-Definir lista de preguntas (listas con opciones y respuesta correcta)
+Referencia oficial: https://docs.python.org/3/library/random.html#random.shuffle
 
-definir frases para resultados de mal, bien, excelnte. 
+# Instrucciones 
+Descargar el archivo y correrlo en terminal o Thony
+      F1TRIVA.py
+Responder a las preguntas que aparecen.
+Y recibe las noticias sobre tu afición de la F1.
 
-variable SCORE=0
+Gracias!
 
-2.Ciclos para cada pregunta (for o while)
 
-mostrar pregunta y opciones de respuesta 
-
-leer respuesta con input()
-
-if = respuesta correcta -> SCORE = SCORE + 1
-
-(esto para cada pregunta)
-
-3. print(SCORE)
-
-if = para imprimir una frase sobre su resultado 
-
-4. EF= input() para preguntar si quiere jugar denuevo
-
-si si, reiniciar SCORE y repetir
-
-      si no, print("Gracias por jugar") 
