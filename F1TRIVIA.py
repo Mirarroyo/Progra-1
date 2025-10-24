@@ -58,7 +58,8 @@ def jugar():
     # Lista anidada para las preguntas, sub-listas para opcion y respuesta
     preguntas = [
         ["\n¿Quién tiene más campeonatos mundiales de Fórmula 1?",
-         ["a) Lewis Hamilton", "b) Michael Schumacher", "c) Max Verstappen", "d) Ayrton Senna"],
+         ["a) Lewis Hamilton", "b) Michael Schumacher", "c) Max Verstappen", 
+          "d) Ayrton Senna"],
          "b"],
         
         ["\n¿En qué año se celebró el primer campeonato oficial de Fórmula 1?",
@@ -68,10 +69,12 @@ def jugar():
          ["a) Mercedes", "b) Ferrari", "c) Red Bull", "d) McLaren"], "b"],
         
         ["\n¿Qué piloto español ganó el Mundial en 2005 y 2006?",
-         ["a) Fernando Alonso", "b) Carlos Sainz", "c) Pedro de la Rosa", "d) Marc Gené"], "a"],
+         ["a) Fernando Alonso", "b) Carlos Sainz", "c) Pedro de la Rosa", 
+          "d) Marc Gené"], "a"],
         
         ["\n¿En qué circuito se corre el Gran Premio de Mónaco?",
-         ["a) Silverstone", "b) Monza", "c) Monte Carlo", "d) Spa-Francorchamps"],"c"],
+         ["a) Silverstone", "b) Monza", "c) Monte Carlo", 
+          "d) Spa-Francorchamps"],"c"],
         
         ["\n¿Cuál es el color principal del equipo Red Bull Racing?",
          ["a) Azul", "b) Rojo", "c) Negro", "d) Amarillo"], "a"],
@@ -80,7 +83,8 @@ def jugar():
          ["a) China", "b) Japón", "c) Corea del Sur", "d) Tailandia"], "b"],
         
         ["\n¿Cuál es el apodo del piloto Charles Leclerc?",
-         ["a) The Prince of Monaco", "b) The Ice Man", "c) Mad Max", "d) The Honey Badger"], "a"],
+         ["a) The Prince of Monaco", "b) The Ice Man", "c) Mad Max", 
+          "d) The Honey Badger"], "a"],
         
         ["\n¿Qué neumáticos fabrica la Fórmula 1 actualmente?",
          ["a) Bridgestone", "b) Michelin", "c) Goodyear", "d) Pirelli"], "d"],
